@@ -33,6 +33,16 @@ class _$AppRouter extends RootStackRouter {
         barrierDismissible: false,
       );
     },
+    SplashRoute.name: (routeData) {
+      return CustomPage<String>(
+        routeData: routeData,
+        child: const SplashPage(),
+        transitionsBuilder: TransitionsBuilders.fadeIn,
+        durationInMilliseconds: 400,
+        opaque: true,
+        barrierDismissible: false,
+      );
+    },
   };
 
   @override
@@ -51,6 +61,11 @@ class _$AppRouter extends RootStackRouter {
             RouteConfig(
               HomeRoute.name,
               path: 'home',
+              parent: MainFrameRoute.name,
+            ),
+            RouteConfig(
+              SplashRoute.name,
+              path: 'intro',
               parent: MainFrameRoute.name,
             ),
           ],
@@ -87,4 +102,16 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+}
+
+/// generated route for
+/// [SplashPage]
+class SplashRoute extends PageRouteInfo<void> {
+  const SplashRoute()
+      : super(
+          SplashRoute.name,
+          path: 'intro',
+        );
+
+  static const String name = 'SplashRoute';
 }

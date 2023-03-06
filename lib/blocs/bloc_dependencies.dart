@@ -4,6 +4,6 @@ import 'main_frame_cubit.dart';
 
 class BlocDependencies {
   static void init(GetIt injector) {
-    injector.registerFactory<AMSFrameCubit>(() => AMSFrameCubit());
+    injector.registerFactory<MainFrameCubit>(() => MainFrameCubit());
   }
 }

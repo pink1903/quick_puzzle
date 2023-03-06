@@ -5,16 +5,16 @@ import '../models/services/profile/profile_model.dart';
 part 'main_frame_state.freezed.dart';
 
 @freezed
-class AMSFrameState with _$AMSFrameState {
-  const factory AMSFrameState.initial() = AMSFrameInitialState;
+class MainFrameState with _$MainFrameState {
+  const factory MainFrameState.initial() = MainFrameInitialState;
 
-  const factory AMSFrameState.loading() = AMSFrameLoadingState;
+  const factory MainFrameState.loading() = MainFrameLoadingState;
 
-  const factory AMSFrameState.loaded({
+  const factory MainFrameState.loaded({
     ProfileModel? profile,
   }) = AMSFrameLoadedState;
 
-  const factory AMSFrameState.failure({
+  const factory MainFrameState.failure({
     String? errorCode,
     String? errorMessage,
   }) = AMSFrameFailureState;

@@ -43,8 +43,8 @@ abstract class BaseCubit<S> extends Cubit<S> {
 }
 
 
-class AMSFrameCubit extends BaseCubit<AMSFrameState> {
-  AMSFrameCubit() : super(const AMSFrameState.initial());
+class MainFrameCubit extends BaseCubit<MainFrameState> {
+  MainFrameCubit() : super(const MainFrameState.initial());
   // final AuthBusiness _authBusiness;
 
   // Future<void> getUserInfo() async {
@@ -61,13 +61,13 @@ class AMSFrameCubit extends BaseCubit<AMSFrameState> {
   //                 .join(','))
   //             .join('|') ??
   //         '';
-  //     emit(AMSFrameState.loaded(profile: userResult.data));
+  //     emit(MainFrameState.loaded(profile: userResult.data));
   //   } else {
   //     final errorCode =
   //         HttpErrorCodeUtility.verifyBusinessStatusCode(userResult);
   //     final errorMessage =
   //         HttpErrorCodeUtility.handleErrorMessage(userResult.errorMessage);
-  //     emit(AMSFrameState.failure(
+  //     emit(MainFrameState.failure(
   //       errorCode: errorCode,
   //       errorMessage: errorMessage,
   //     ));

@@ -115,7 +115,7 @@ S extends BaseCubitStatefulWidget> extends State<S>
 }
 
 class _MainFramePageState
-    extends BaseCubitStateFulWidgetState<AMSFrameCubit, MainFramePage> {
+    extends BaseCubitStateFulWidgetState<MainFrameCubit, MainFramePage> {
   @override
   void initState() {
     super.initState();
@@ -136,7 +136,7 @@ class _MainFramePageState
             children: [
               BlocBuilder(
                 bloc: bloc,
-                builder: (context, AMSFrameState state) {
+                builder: (context, MainFrameState state) {
                   return state.maybeWhen(
                     // initial: () => buildShimmer(context)!,
                     loaded: (profile) => _buildHeader(
