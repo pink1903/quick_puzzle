@@ -23,20 +23,20 @@ class _$AppRouter extends RootStackRouter {
         child: const MainFramePage(),
       );
     },
-    HomeRoute.name: (routeData) {
+    SplashRoute.name: (routeData) {
       return CustomPage<String>(
         routeData: routeData,
-        child: const HomePage(),
+        child: const SplashPage(),
         transitionsBuilder: TransitionsBuilders.fadeIn,
         durationInMilliseconds: 400,
         opaque: true,
         barrierDismissible: false,
       );
     },
-    SplashRoute.name: (routeData) {
+    HomeRoute.name: (routeData) {
       return CustomPage<String>(
         routeData: routeData,
-        child: const SplashPage(),
+        child: const HomePage(),
         transitionsBuilder: TransitionsBuilders.fadeIn,
         durationInMilliseconds: 400,
         opaque: true,
@@ -52,20 +52,13 @@ class _$AppRouter extends RootStackRouter {
           path: '/',
           children: [
             RouteConfig(
-              '#redirect',
-              path: '',
+              SplashRoute.name,
+              path: 'intro',
               parent: MainFrameRoute.name,
-              redirectTo: 'home',
-              fullMatch: true,
             ),
             RouteConfig(
               HomeRoute.name,
               path: 'home',
-              parent: MainFrameRoute.name,
-            ),
-            RouteConfig(
-              SplashRoute.name,
-              path: 'intro',
               parent: MainFrameRoute.name,
             ),
           ],
@@ -93,18 +86,6 @@ class MainFrameRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [HomePage]
-class HomeRoute extends PageRouteInfo<void> {
-  const HomeRoute()
-      : super(
-          HomeRoute.name,
-          path: 'home',
-        );
-
-  static const String name = 'HomeRoute';
-}
-
-/// generated route for
 /// [SplashPage]
 class SplashRoute extends PageRouteInfo<void> {
   const SplashRoute()
@@ -114,4 +95,16 @@ class SplashRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
+}
+
+/// generated route for
+/// [HomePage]
+class HomeRoute extends PageRouteInfo<void> {
+  const HomeRoute()
+      : super(
+          HomeRoute.name,
+          path: 'home',
+        );
+
+  static const String name = 'HomeRoute';
 }

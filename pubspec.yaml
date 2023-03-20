@@ -51,6 +51,8 @@ dependencies:
   responsive_framework: ^0.2.0
   get: ^4.6.5
   google_fonts: ^4.0.3
+  easy_separator: ^1.0.1
+  liquid_pull_to_refresh: ^3.0.1
 
 dev_dependencies:
   flutter_test:

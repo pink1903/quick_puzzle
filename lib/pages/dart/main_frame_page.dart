@@ -6,8 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../blocs/main_frame_cubit.dart';
-import '../../blocs/main_frame_state.dart';
-
+import 'ams_side_bar.dart';
 
 abstract class BaseCubitStatefulWidget extends StatefulWidget {
   const BaseCubitStatefulWidget({Key? key}) : super(key: key);
@@ -20,9 +19,8 @@ class MainFramePage extends BaseCubitStatefulWidget {
   State<MainFramePage> createState() => _MainFramePageState();
 }
 
-
 abstract class BaseCubitStateFulWidgetState<B extends BaseCubit,
-S extends BaseCubitStatefulWidget> extends State<S>
+        S extends BaseCubitStatefulWidget> extends State<S>
     with WidgetsBindingObserver, AutomaticKeepAliveClientMixin<S> {
   final B bloc = GetIt.I.get<B>();
 
@@ -127,41 +125,11 @@ class _MainFramePageState
 
   @override
   Widget buildBody(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        // const SideBarMenu(),
-        Flexible(
-          child: Column(
-            children: [
-              BlocBuilder(
-                bloc: bloc,
-                builder: (context, MainFrameState state) {
-                  return state.maybeWhen(
-                    // initial: () => buildShimmer(context)!,
-                    loaded: (profile) => _buildHeader(
-                      userName: profile?.fullName ?? '',
-                    ),
-                    failure: (errorCode, errorMessage) {
-                      return const SizedBox.shrink();
-                    },
-                    orElse: () => const SizedBox.shrink(),
-                  );
-                },
-              ),
-              const Expanded(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 24,
-                  ),
-                  child: AutoRouter(),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
+    return BlocProvider(
+        create: (context) => bloc,
+        child: AmsSideBar(
+          child: AutoRouter(),
+        ));
   }
 
   Widget _buildHeader({String userName = '', int notifyCount = 0}) {

@@ -16,19 +16,20 @@ part 'app_router.gr.dart';
       page: MainFramePage,
       initial: true,
       children: [
-        RedirectRoute(path: '', redirectTo: RouteKey.home),
-        CustomRoute<String>(
-          transitionsBuilder: TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 400,
-          path: RouteKey.home,
-          page: HomePage,
-        ),
         CustomRoute<String>(
           transitionsBuilder: TransitionsBuilders.fadeIn,
           durationInMilliseconds: 400,
           path: RouteKey.intro,
           page: SplashPage,
         ),
+        // RedirectRoute(path: '', redirectTo: RouteKey.home),
+        CustomRoute<String>(
+          transitionsBuilder: TransitionsBuilders.fadeIn,
+          durationInMilliseconds: 400,
+          path: RouteKey.home,
+          page: HomePage,
+        ),
+
       ],
       // guards: [
       //   AuthGuard
