@@ -6,15 +6,15 @@ import 'package:flutter/material.dart';
 
 import 'menu.dart';
 
-class AmsSideBar extends StatefulWidget {
+class SideBar extends StatefulWidget {
   final Widget? child;
-  const AmsSideBar({Key? key, this.child}) : super(key: key);
+  const SideBar({Key? key, this.child}) : super(key: key);
 
   @override
-  State<AmsSideBar> createState() => _AmsDrawerState();
+  State<SideBar> createState() => _AmsDrawerState();
 }
 
-class _AmsDrawerState extends State<AmsSideBar> {
+class _AmsDrawerState extends State<SideBar> {
   int selectedIndex = -1;
   bool isExpanded = true;
   TextStyle? get _textStyle => Theme.of(context).textTheme.bodyText2;

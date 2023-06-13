@@ -6,7 +6,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../blocs/main_frame_cubit.dart';
-import 'ams_side_bar.dart';
 
 abstract class BaseCubitStatefulWidget extends StatefulWidget {
   const BaseCubitStatefulWidget({Key? key}) : super(key: key);
@@ -128,9 +127,10 @@ class _MainFramePageState
   Widget buildBody(BuildContext context) {
     return BlocProvider(
         create: (context) => bloc,
-        child: const AmsSideBar(
-          child: AutoRouter(),
-        ));
+        // child: const SideBar(
+        //   child: AutoRouter(),
+        // )
+        child: const AutoRouter());
   }
 
   Widget _buildHeader({String userName = '', int notifyCount = 0}) {

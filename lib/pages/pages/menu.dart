@@ -7,13 +7,13 @@ final List<MenuItem> menuItems = [
     router: '',
     path: 'dashboard',
   ),
-  MenuItem(
-      title: 'manage-requests',
-      icon: Icons.map,
-      children: [
-        MenuItem(title: 'onboarding', router: '', path: 'onboarding'),
-      ],
-      isExpanded: true)
+  // MenuItem(
+  //     title: 'manage-requests',
+  //     icon: Icons.map,
+  //     children: [
+  //       MenuItem(title: 'onboarding', router: '', path: 'onboarding'),
+  //     ],
+  //     isExpanded: true)
 ];
 
 class MenuItem {
