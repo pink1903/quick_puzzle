@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,10 +12,11 @@ import '../../../widgets/quiz/answer_card.dart';
 import '../../../widgets/quiz/countdown_timer.dart';
 import '../../../widgets/quiz/quize_number_card.dart';
 
+@RoutePage()
 class OverviewPage extends GetView {
   const OverviewPage({Key? key}) : super(key: key);
 
-  static const String routeName = '/quizeoverview';
+  // static const String routeName = '/quizeoverview';
 
   @override
   Widget build(BuildContext context) {
