@@ -5,7 +5,7 @@ import '../pages/home/home_page.dart';
 import '../pages/main_frame_page.dart';
 import '../pages/main_page.dart';
 import '../pages/quiz/overview_page.dart';
-import '../pages/splash/splash.dart';
+import '../pages/splash/intro_page.dart';
 import 'route_keys.dart';
 
 part 'app_router.gr.dart';

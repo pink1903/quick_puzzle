@@ -5,8 +5,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../configs/themes/app_colors.dart';
 
 @RoutePage()
-class SplashPage extends StatelessWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class IntroPage extends StatelessWidget {
+  const IntroPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

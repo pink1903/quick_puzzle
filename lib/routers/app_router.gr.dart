@@ -27,12 +27,6 @@ abstract class _$WebAppRouter extends RootStackRouter {
         child: const HomePage(),
       );
     },
-    SplashRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const SplashPage(),
-      );
-    },
     MainFrameRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -49,6 +43,12 @@ abstract class _$WebAppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const DocumentsPage(),
+      );
+    },
+    IntroRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const IntroPage(),
       );
     },
   };
@@ -78,20 +78,6 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
-}
-
-/// generated route for
-/// [SplashPage]
-class SplashRoute extends PageRouteInfo<void> {
-  const SplashRoute({List<PageRouteInfo>? children})
-      : super(
-          SplashRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SplashRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -134,6 +120,20 @@ class DocumentsRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'DocumentsRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [IntroPage]
+class IntroRoute extends PageRouteInfo<void> {
+  const IntroRoute({List<PageRouteInfo>? children})
+      : super(
+          IntroRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'IntroRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
