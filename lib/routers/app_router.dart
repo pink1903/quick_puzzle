@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
 
 import '../pages/dart/home.dart';
 import '../pages/dart/main_frame_page.dart';
@@ -8,41 +7,25 @@ import 'route_keys.dart';
 
 part 'app_router.gr.dart';
 
-@MaterialAutoRouter(
-  replaceInRouteName: 'Page,Route',
-  routes: <AutoRoute>[
-    AutoRoute<String>(
-      path: RouteKey.root,
-      page: MainFramePage,
-      initial: true,
-      children: [
-        CustomRoute<String>(
-          transitionsBuilder: TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 400,
-          path: RouteKey.intro,
-          page: SplashPage,
-        ),
-        // RedirectRoute(path: '', redirectTo: RouteKey.home),
-        CustomRoute<String>(
-          transitionsBuilder: TransitionsBuilders.fadeIn,
-          durationInMilliseconds: 400,
-          path: RouteKey.home,
-          page: HomePage,
-        ),
+@AutoRouterConfig()
+class WebAppRouter extends _$WebAppRouter {
+  @override
+  RouteType get defaultRouteType =>
+      const RouteType.material(); //.cupertino, .adaptive ..etc
 
-      ],
-      // guards: [
-      //   AuthGuard
-      // ]
-    ),
-    // AutoRoute<String>(
-    //   path: RouteKey.unauthorized,
-    //   page: UnAuthenPage,
-    // ),
+  @override
+  late List<AutoRoute> routes = [
+    AutoRoute(path: RouteKey.root, page: MainFrameRoute.page, children: [
+      RedirectRoute(path: '', redirectTo: RouteKey.intro),
+      AutoRoute(
+        path: RouteKey.intro,
+        page: SplashRoute.page,
+      ),
+      AutoRoute(
+        path: RouteKey.home,
+        page: HomeRoute.page,
+      ),
+    ]),
     RedirectRoute(path: '*', redirectTo: RouteKey.root),
-  ],
-)
-// extend the generated private router
-class AppRouter extends _$AppRouter {
-  AppRouter();
+  ];
 }

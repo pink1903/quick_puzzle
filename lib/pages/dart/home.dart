@@ -1,6 +1,5 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:quick_puzzle/models/services/user/user_modal.dart';
 
 import '../../configs/themes/app_colors.dart';
@@ -8,8 +7,8 @@ import '../../configs/themes/app_icons_icons.dart';
 import '../../configs/themes/custom_text_styles.dart';
 import '../../configs/themes/ui_parameters.dart';
 import '../../widgets/common/content_area.dart';
-import '../../widgets/home/quiz_paper_card.dart';
 
+@RoutePage()
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 

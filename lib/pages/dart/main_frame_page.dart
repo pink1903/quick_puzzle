@@ -12,6 +12,7 @@ abstract class BaseCubitStatefulWidget extends StatefulWidget {
   const BaseCubitStatefulWidget({Key? key}) : super(key: key);
 }
 
+@RoutePage()
 class MainFramePage extends BaseCubitStatefulWidget {
   const MainFramePage({super.key});
 
@@ -127,7 +128,7 @@ class _MainFramePageState
   Widget buildBody(BuildContext context) {
     return BlocProvider(
         create: (context) => bloc,
-        child: AmsSideBar(
+        child: const AmsSideBar(
           child: AutoRouter(),
         ));
   }

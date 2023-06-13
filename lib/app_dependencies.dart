@@ -9,8 +9,6 @@ import 'models/model_dependencies.dart';
 import 'routers/app_router.dart';
 import 'services/service_dependencies.dart';
 import 'utilities/app_configuration.dart';
-// import 'utilities/auth/authen_guard.dart';
-import 'utilities/network/interceptors.dart';
 
 class AppDependencies {
   static GetIt get injector => GetIt.I;
@@ -21,8 +19,8 @@ class AppDependencies {
     final AppConfiguration config =
         AppDependencies.injector.get<AppConfiguration>();
     await config.loadConfig();
-    injector.registerLazySingleton<RestUtils>(
-        () => RestUtils(config.authBaseUrl));
+    injector
+        .registerLazySingleton<RestUtils>(() => RestUtils(config.authBaseUrl));
     injector.registerLazySingleton<RestUtils>(
         () => RestUtils(config.baseUrl, interceptors: [
               // LoggingInterceptor(),
@@ -51,8 +49,7 @@ class AppDependencies {
 
     // injector.registerLazySingleton<AuthGuard>(() => AuthGuard());
 
-    injector.registerLazySingleton<AppRouter>(
-        () => AppRouter());
+    injector.registerLazySingleton<WebAppRouter>(() => WebAppRouter());
     BlocDependencies.init(injector);
     BusinessDependencies.init(injector);
     ServiceDependencies.init(injector);

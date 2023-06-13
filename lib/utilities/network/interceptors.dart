@@ -4,7 +4,6 @@ import 'package:basic_utils/basic_utils.dart';
 import 'package:dio/dio.dart';
 
 import '../../app_dependencies.dart';
-import '../../routers/app_router.dart';
 import '../app_configuration.dart';
 import '../logger.dart';
 import 'network_uti/error_handler.dart';
@@ -44,7 +43,7 @@ class TokenInterceptor extends QueuedInterceptor {
       } else if (response.statusCode == ExceptionHandle.unauthorized) {
         // final AuthGuard authenGuard = AppDependencies.injector.get<AuthGuard>();
         // await authenGuard.clearDataLocal();
-        final AppRouter appRouter = AppDependencies.injector.get<AppRouter>();
+        // final AppRouter appRouter = AppDependencies.injector.get<AppRouter>();
         //Open login
         // await LoginUtils.requestLogin((isSuccess) async {
         //   if (!isSuccess) {
@@ -115,7 +114,6 @@ class AMSDefaultHeaderInterceptor extends Interceptor {
     super.onRequest(options, handler);
   }
 }
-
 
 class LoggingInterceptor extends Interceptor {
   late DateTime _startTime;

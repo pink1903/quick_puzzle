@@ -7,6 +7,7 @@ import 'package:responsive_framework/responsive_wrapper.dart';
 
 import 'app_dependencies.dart';
 import 'routers/app_router.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -14,20 +15,20 @@ Future<void> main() async {
 
   Bloc.observer = AMSBlocObserver();
   debugPrint("isInitialCompleted $isInitialCompleted ");
-  runApp(MyApp(isInitialCompleted: isInitialCompleted,));
-
+  runApp(MyApp(
+    isInitialCompleted: isInitialCompleted,
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  final _appRouter = AppDependencies.injector.get<AppRouter>();
+  final _appRouter = AppDependencies.injector.get<WebAppRouter>();
   final bool isInitialCompleted;
-   MyApp({super.key,  required this.isInitialCompleted});
+  MyApp({super.key, required this.isInitialCompleted});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
+      routerConfig: _appRouter.config(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -48,7 +49,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
 Future<bool> _initApp() async {
   try {
