@@ -107,7 +107,7 @@ class TokenInterceptor extends QueuedInterceptor {
   }
 }
 
-class AMSDefaultHeaderInterceptor extends Interceptor {
+class DefaultHeaderInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     options.headers.remove('User-Agent');

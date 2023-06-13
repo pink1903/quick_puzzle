@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// import 'package:quizzle/screens/quiz/quiz_overview_screen.dart';
+// import 'package:quizzle/screens/quiz/overview_page.dart';
 
 import '../../configs/themes/app_icons_icons.dart';
 import '../../configs/themes/custom_text_styles.dart';

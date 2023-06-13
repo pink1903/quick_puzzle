@@ -3,18 +3,16 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../utilities/mem_cache.dart';
-import '../utilities/network/http_error_code_utility.dart';
 import 'main_frame_state.dart';
 
 abstract class BaseCubit<S> extends Cubit<S> {
   final StreamController<bool> _loadingController =
-  StreamController<bool>.broadcast();
+      StreamController<bool>.broadcast();
   StreamSink<bool> get loadingSink => _loadingController.sink;
   Stream<bool> get loadingStream => _loadingController.stream;
 
   final StreamController<String> _errorController =
-  StreamController<String>.broadcast();
+      StreamController<String>.broadcast();
   StreamSink<String> get errorSink => _errorController.sink;
   Stream<String> get errorStream => _errorController.stream;
 
@@ -41,7 +39,6 @@ abstract class BaseCubit<S> extends Cubit<S> {
     await super.close();
   }
 }
-
 
 class MainFrameCubit extends BaseCubit<MainFrameState> {
   MainFrameCubit() : super(const MainFrameState.initial());

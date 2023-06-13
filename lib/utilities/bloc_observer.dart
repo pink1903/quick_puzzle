@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'logger.dart';
 
-class AMSBlocObserver extends BlocObserver {
+class MainBlocObserver extends BlocObserver {
   @override
   void onChange(BlocBase bloc, Change change) {
     if (!kReleaseMode) {

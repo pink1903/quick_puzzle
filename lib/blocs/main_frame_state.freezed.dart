@@ -45,24 +45,24 @@ mixin _$MainFrameState {
   TResult map<TResult extends Object?>({
     required TResult Function(MainFrameInitialState value) initial,
     required TResult Function(MainFrameLoadingState value) loading,
-    required TResult Function(AMSFrameLoadedState value) loaded,
-    required TResult Function(AMSFrameFailureState value) failure,
+    required TResult Function(FrameLoadedState value) loaded,
+    required TResult Function(FrameFailureState value) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(MainFrameInitialState value)? initial,
     TResult? Function(MainFrameLoadingState value)? loading,
-    TResult? Function(AMSFrameLoadedState value)? loaded,
-    TResult? Function(AMSFrameFailureState value)? failure,
+    TResult? Function(FrameLoadedState value)? loaded,
+    TResult? Function(FrameFailureState value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainFrameInitialState value)? initial,
     TResult Function(MainFrameLoadingState value)? loading,
-    TResult Function(AMSFrameLoadedState value)? loaded,
-    TResult Function(AMSFrameFailureState value)? failure,
+    TResult Function(FrameLoadedState value)? loaded,
+    TResult Function(FrameFailureState value)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -163,8 +163,8 @@ class _$MainFrameInitialState implements MainFrameInitialState {
   TResult map<TResult extends Object?>({
     required TResult Function(MainFrameInitialState value) initial,
     required TResult Function(MainFrameLoadingState value) loading,
-    required TResult Function(AMSFrameLoadedState value) loaded,
-    required TResult Function(AMSFrameFailureState value) failure,
+    required TResult Function(FrameLoadedState value) loaded,
+    required TResult Function(FrameFailureState value) failure,
   }) {
     return initial(this);
   }
@@ -174,8 +174,8 @@ class _$MainFrameInitialState implements MainFrameInitialState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(MainFrameInitialState value)? initial,
     TResult? Function(MainFrameLoadingState value)? loading,
-    TResult? Function(AMSFrameLoadedState value)? loaded,
-    TResult? Function(AMSFrameFailureState value)? failure,
+    TResult? Function(FrameLoadedState value)? loaded,
+    TResult? Function(FrameFailureState value)? failure,
   }) {
     return initial?.call(this);
   }
@@ -185,8 +185,8 @@ class _$MainFrameInitialState implements MainFrameInitialState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainFrameInitialState value)? initial,
     TResult Function(MainFrameLoadingState value)? loading,
-    TResult Function(AMSFrameLoadedState value)? loaded,
-    TResult Function(AMSFrameFailureState value)? failure,
+    TResult Function(FrameLoadedState value)? loaded,
+    TResult Function(FrameFailureState value)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -277,8 +277,8 @@ class _$MainFrameLoadingState implements MainFrameLoadingState {
   TResult map<TResult extends Object?>({
     required TResult Function(MainFrameInitialState value) initial,
     required TResult Function(MainFrameLoadingState value) loading,
-    required TResult Function(AMSFrameLoadedState value) loaded,
-    required TResult Function(AMSFrameFailureState value) failure,
+    required TResult Function(FrameLoadedState value) loaded,
+    required TResult Function(FrameFailureState value) failure,
   }) {
     return loading(this);
   }
@@ -288,8 +288,8 @@ class _$MainFrameLoadingState implements MainFrameLoadingState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(MainFrameInitialState value)? initial,
     TResult? Function(MainFrameLoadingState value)? loading,
-    TResult? Function(AMSFrameLoadedState value)? loaded,
-    TResult? Function(AMSFrameFailureState value)? failure,
+    TResult? Function(FrameLoadedState value)? loaded,
+    TResult? Function(FrameFailureState value)? failure,
   }) {
     return loading?.call(this);
   }
@@ -299,8 +299,8 @@ class _$MainFrameLoadingState implements MainFrameLoadingState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainFrameInitialState value)? initial,
     TResult Function(MainFrameLoadingState value)? loading,
-    TResult Function(AMSFrameLoadedState value)? loaded,
-    TResult Function(AMSFrameFailureState value)? failure,
+    TResult Function(FrameLoadedState value)? loaded,
+    TResult Function(FrameFailureState value)? failure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -315,20 +315,20 @@ abstract class MainFrameLoadingState implements MainFrameState {
 }
 
 /// @nodoc
-abstract class _$$AMSFrameLoadedStateCopyWith<$Res> {
-  factory _$$AMSFrameLoadedStateCopyWith(_$AMSFrameLoadedState value,
-          $Res Function(_$AMSFrameLoadedState) then) =
-      __$$AMSFrameLoadedStateCopyWithImpl<$Res>;
+abstract class _$$FrameLoadedStateCopyWith<$Res> {
+  factory _$$FrameLoadedStateCopyWith(
+          _$FrameLoadedState value, $Res Function(_$FrameLoadedState) then) =
+      __$$FrameLoadedStateCopyWithImpl<$Res>;
   @useResult
   $Res call({ProfileModel? profile});
 }
 
 /// @nodoc
-class __$$AMSFrameLoadedStateCopyWithImpl<$Res>
-    extends _$MainFrameStateCopyWithImpl<$Res, _$AMSFrameLoadedState>
-    implements _$$AMSFrameLoadedStateCopyWith<$Res> {
-  __$$AMSFrameLoadedStateCopyWithImpl(
-      _$AMSFrameLoadedState _value, $Res Function(_$AMSFrameLoadedState) _then)
+class __$$FrameLoadedStateCopyWithImpl<$Res>
+    extends _$MainFrameStateCopyWithImpl<$Res, _$FrameLoadedState>
+    implements _$$FrameLoadedStateCopyWith<$Res> {
+  __$$FrameLoadedStateCopyWithImpl(
+      _$FrameLoadedState _value, $Res Function(_$FrameLoadedState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -336,7 +336,7 @@ class __$$AMSFrameLoadedStateCopyWithImpl<$Res>
   $Res call({
     Object? profile = freezed,
   }) {
-    return _then(_$AMSFrameLoadedState(
+    return _then(_$FrameLoadedState(
       profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
@@ -347,8 +347,8 @@ class __$$AMSFrameLoadedStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AMSFrameLoadedState implements AMSFrameLoadedState {
-  const _$AMSFrameLoadedState({this.profile});
+class _$FrameLoadedState implements FrameLoadedState {
+  const _$FrameLoadedState({this.profile});
 
   @override
   final ProfileModel? profile;
@@ -362,7 +362,7 @@ class _$AMSFrameLoadedState implements AMSFrameLoadedState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AMSFrameLoadedState &&
+            other is _$FrameLoadedState &&
             (identical(other.profile, profile) || other.profile == profile));
   }
 
@@ -372,9 +372,8 @@ class _$AMSFrameLoadedState implements AMSFrameLoadedState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AMSFrameLoadedStateCopyWith<_$AMSFrameLoadedState> get copyWith =>
-      __$$AMSFrameLoadedStateCopyWithImpl<_$AMSFrameLoadedState>(
-          this, _$identity);
+  _$$FrameLoadedStateCopyWith<_$FrameLoadedState> get copyWith =>
+      __$$FrameLoadedStateCopyWithImpl<_$FrameLoadedState>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -418,8 +417,8 @@ class _$AMSFrameLoadedState implements AMSFrameLoadedState {
   TResult map<TResult extends Object?>({
     required TResult Function(MainFrameInitialState value) initial,
     required TResult Function(MainFrameLoadingState value) loading,
-    required TResult Function(AMSFrameLoadedState value) loaded,
-    required TResult Function(AMSFrameFailureState value) failure,
+    required TResult Function(FrameLoadedState value) loaded,
+    required TResult Function(FrameFailureState value) failure,
   }) {
     return loaded(this);
   }
@@ -429,8 +428,8 @@ class _$AMSFrameLoadedState implements AMSFrameLoadedState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(MainFrameInitialState value)? initial,
     TResult? Function(MainFrameLoadingState value)? loading,
-    TResult? Function(AMSFrameLoadedState value)? loaded,
-    TResult? Function(AMSFrameFailureState value)? failure,
+    TResult? Function(FrameLoadedState value)? loaded,
+    TResult? Function(FrameFailureState value)? failure,
   }) {
     return loaded?.call(this);
   }
@@ -440,8 +439,8 @@ class _$AMSFrameLoadedState implements AMSFrameLoadedState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainFrameInitialState value)? initial,
     TResult Function(MainFrameLoadingState value)? loading,
-    TResult Function(AMSFrameLoadedState value)? loaded,
-    TResult Function(AMSFrameFailureState value)? failure,
+    TResult Function(FrameLoadedState value)? loaded,
+    TResult Function(FrameFailureState value)? failure,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -451,31 +450,31 @@ class _$AMSFrameLoadedState implements AMSFrameLoadedState {
   }
 }
 
-abstract class AMSFrameLoadedState implements MainFrameState {
-  const factory AMSFrameLoadedState({final ProfileModel? profile}) =
-      _$AMSFrameLoadedState;
+abstract class FrameLoadedState implements MainFrameState {
+  const factory FrameLoadedState({final ProfileModel? profile}) =
+      _$FrameLoadedState;
 
   ProfileModel? get profile;
   @JsonKey(ignore: true)
-  _$$AMSFrameLoadedStateCopyWith<_$AMSFrameLoadedState> get copyWith =>
+  _$$FrameLoadedStateCopyWith<_$FrameLoadedState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$AMSFrameFailureStateCopyWith<$Res> {
-  factory _$$AMSFrameFailureStateCopyWith(_$AMSFrameFailureState value,
-          $Res Function(_$AMSFrameFailureState) then) =
-      __$$AMSFrameFailureStateCopyWithImpl<$Res>;
+abstract class _$$FrameFailureStateCopyWith<$Res> {
+  factory _$$FrameFailureStateCopyWith(
+          _$FrameFailureState value, $Res Function(_$FrameFailureState) then) =
+      __$$FrameFailureStateCopyWithImpl<$Res>;
   @useResult
   $Res call({String? errorCode, String? errorMessage});
 }
 
 /// @nodoc
-class __$$AMSFrameFailureStateCopyWithImpl<$Res>
-    extends _$MainFrameStateCopyWithImpl<$Res, _$AMSFrameFailureState>
-    implements _$$AMSFrameFailureStateCopyWith<$Res> {
-  __$$AMSFrameFailureStateCopyWithImpl(_$AMSFrameFailureState _value,
-      $Res Function(_$AMSFrameFailureState) _then)
+class __$$FrameFailureStateCopyWithImpl<$Res>
+    extends _$MainFrameStateCopyWithImpl<$Res, _$FrameFailureState>
+    implements _$$FrameFailureStateCopyWith<$Res> {
+  __$$FrameFailureStateCopyWithImpl(
+      _$FrameFailureState _value, $Res Function(_$FrameFailureState) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -484,7 +483,7 @@ class __$$AMSFrameFailureStateCopyWithImpl<$Res>
     Object? errorCode = freezed,
     Object? errorMessage = freezed,
   }) {
-    return _then(_$AMSFrameFailureState(
+    return _then(_$FrameFailureState(
       errorCode: freezed == errorCode
           ? _value.errorCode
           : errorCode // ignore: cast_nullable_to_non_nullable
@@ -499,8 +498,8 @@ class __$$AMSFrameFailureStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$AMSFrameFailureState implements AMSFrameFailureState {
-  const _$AMSFrameFailureState({this.errorCode, this.errorMessage});
+class _$FrameFailureState implements FrameFailureState {
+  const _$FrameFailureState({this.errorCode, this.errorMessage});
 
   @override
   final String? errorCode;
@@ -516,7 +515,7 @@ class _$AMSFrameFailureState implements AMSFrameFailureState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AMSFrameFailureState &&
+            other is _$FrameFailureState &&
             (identical(other.errorCode, errorCode) ||
                 other.errorCode == errorCode) &&
             (identical(other.errorMessage, errorMessage) ||
@@ -529,9 +528,8 @@ class _$AMSFrameFailureState implements AMSFrameFailureState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AMSFrameFailureStateCopyWith<_$AMSFrameFailureState> get copyWith =>
-      __$$AMSFrameFailureStateCopyWithImpl<_$AMSFrameFailureState>(
-          this, _$identity);
+  _$$FrameFailureStateCopyWith<_$FrameFailureState> get copyWith =>
+      __$$FrameFailureStateCopyWithImpl<_$FrameFailureState>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -575,8 +573,8 @@ class _$AMSFrameFailureState implements AMSFrameFailureState {
   TResult map<TResult extends Object?>({
     required TResult Function(MainFrameInitialState value) initial,
     required TResult Function(MainFrameLoadingState value) loading,
-    required TResult Function(AMSFrameLoadedState value) loaded,
-    required TResult Function(AMSFrameFailureState value) failure,
+    required TResult Function(FrameLoadedState value) loaded,
+    required TResult Function(FrameFailureState value) failure,
   }) {
     return failure(this);
   }
@@ -586,8 +584,8 @@ class _$AMSFrameFailureState implements AMSFrameFailureState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(MainFrameInitialState value)? initial,
     TResult? Function(MainFrameLoadingState value)? loading,
-    TResult? Function(AMSFrameLoadedState value)? loaded,
-    TResult? Function(AMSFrameFailureState value)? failure,
+    TResult? Function(FrameLoadedState value)? loaded,
+    TResult? Function(FrameFailureState value)? failure,
   }) {
     return failure?.call(this);
   }
@@ -597,8 +595,8 @@ class _$AMSFrameFailureState implements AMSFrameFailureState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainFrameInitialState value)? initial,
     TResult Function(MainFrameLoadingState value)? loading,
-    TResult Function(AMSFrameLoadedState value)? loaded,
-    TResult Function(AMSFrameFailureState value)? failure,
+    TResult Function(FrameLoadedState value)? loaded,
+    TResult Function(FrameFailureState value)? failure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -608,14 +606,14 @@ class _$AMSFrameFailureState implements AMSFrameFailureState {
   }
 }
 
-abstract class AMSFrameFailureState implements MainFrameState {
-  const factory AMSFrameFailureState(
+abstract class FrameFailureState implements MainFrameState {
+  const factory FrameFailureState(
       {final String? errorCode,
-      final String? errorMessage}) = _$AMSFrameFailureState;
+      final String? errorMessage}) = _$FrameFailureState;
 
   String? get errorCode;
   String? get errorMessage;
   @JsonKey(ignore: true)
-  _$$AMSFrameFailureStateCopyWith<_$AMSFrameFailureState> get copyWith =>
+  _$$FrameFailureStateCopyWith<_$FrameFailureState> get copyWith =>
       throw _privateConstructorUsedError;
 }

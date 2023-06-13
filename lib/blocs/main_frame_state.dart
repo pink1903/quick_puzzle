@@ -12,10 +12,10 @@ class MainFrameState with _$MainFrameState {
 
   const factory MainFrameState.loaded({
     ProfileModel? profile,
-  }) = AMSFrameLoadedState;
+  }) = FrameLoadedState;
 
   const factory MainFrameState.failure({
     String? errorCode,
     String? errorMessage,
-  }) = AMSFrameFailureState;
+  }) = FrameFailureState;
 }

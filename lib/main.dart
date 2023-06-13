@@ -13,7 +13,7 @@ Future<void> main() async {
 
   final isInitialCompleted = await _initApp();
 
-  Bloc.observer = AMSBlocObserver();
+  Bloc.observer = MainBlocObserver();
   debugPrint("isInitialCompleted $isInitialCompleted ");
   runApp(MyApp(
     isInitialCompleted: isInitialCompleted,

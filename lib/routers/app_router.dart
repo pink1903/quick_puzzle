@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 
-import '../pages/pages/home.dart';
-import '../pages/pages/main_frame_page.dart';
-import '../pages/pages/splash/splash.dart';
+import '../pages/home/home_page.dart';
+import '../pages/main_frame_page.dart';
+import '../pages/splash/splash.dart';
 import 'route_keys.dart';
 
 part 'app_router.gr.dart';
